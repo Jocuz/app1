@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: api
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python src/app.py"
+    envVars:
+      - key: DB_HOST
+        value: "<host>"
+      - key: DB_NAME
+        value: "agenda"
+      - key: DB_USER
+        value: "username"
+      - key: DB_PASSWORD
+        value: "password"
